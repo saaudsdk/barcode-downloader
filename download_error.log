@@ -1,0 +1,7 @@
+Array
+(
+    [type] => 2
+    [message] => file_get_contents(https://barcode.local/barcode.php?barcode_number=45454545): Failed to open stream: operation failed
+    [file] => E:\Web-Projects\barcode.local\download.php
+    [line] => 15
+)
