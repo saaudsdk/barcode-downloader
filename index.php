@@ -42,14 +42,16 @@
         </div>
     </div>
 
-    <div class="row justify-content-center">
-        <div class="col-md-8 col-xl-8 text-center">
-            <img src="barcode.php?barcode_number=<?=@$_GET['barcode_number']?>&type=<?=@$_GET['type']?>" alt="">
+    <?php if(isset($_GET['barcode_number'])): ?>
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-xl-8 text-center">
+                <img src="barcode.php?barcode_number=<?=@$_GET['barcode_number']?>&type=<?=@$_GET['type']?>" alt="">
+            </div>
+            <div class="col-md-6 col-xl-8 text-center mt-5">
+                <button id="downloadButton" class="btn btn-secondary">Download Image</button>
+            </div>
         </div>
-        <div class="col-md-6 col-xl-8 text-center mt-5">
-            <button id="downloadButton" class="btn btn-secondary">Download Image</button>
-        </div>
-    </div>
+    <?php endif; ?>
 
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
